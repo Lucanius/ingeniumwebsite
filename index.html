@@ -531,16 +531,17 @@
   @media (max-width: 768px) {
     /* NAVBAR */
     nav { padding: 0 5%; }
-    .nav-links { display: none; } /* menu hamburguer seria o próximo passo */
+    .nav-links { display: none; }
     .logo { font-size: 1.4rem; }
 
-    /* HERO — coluna única, tamanhos maiores para boa leitura */
+    /* HERO — coluna única, altura ajustada ao conteúdo */
     #hero {
       grid-template-columns: 1fr;
-      padding: 110px 5% 60px;
-      min-height: auto;
+      padding: 100px 5% 50px;
+      min-height: unset;  /* remove a altura de 100vh no mobile */
+      height: auto;
     }
-    .hero-visual { display: none; } /* esconde o card de stats no mobile */
+    .hero-visual { display: none !important; } /* força esconder o card *//* esconde o card de stats no mobile */
     .hero-title { font-size: 2.6rem; }
     .hero-desc { font-size: 1rem; max-width: 100%; }
     .btn-primary, .btn-whatsapp {
